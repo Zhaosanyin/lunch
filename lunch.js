@@ -9,7 +9,7 @@ I'm not hungry and I have 30 minutes for lunch.
 I don't know what to do!
 --
 I'm hungry and I have 15 minutes for lunch.
-I don't know what to do! 
+I don't know what to do!
 
 function whatToDoForLunch(hungry, availableTime){
   console.log("hungry is", hungry);
@@ -24,17 +24,17 @@ function whatToDoForLunch(hungry, availableTime) {
 */
 
 
-const hungry = true;
+//const hungry = true;
 
-function whatToDoForLunch(hungry, availableTime) {
+let whatToDoForLunch = function(availableTime) {
+  let whatToDo = "";
   if (availableTime <= 20) {
-    console.log("pick up a snack or grab something you have ready at home!");
+    whatToDo = "pick up a snack or grab something you have ready at home!";
   } else if (availableTime <= 30) {
-    console.log("Maybe going outside isn't such a great idea…");
-    } else{
-    console.log("this is an intense program after all and you should probably reconsider.");
-      }
-
-  return;
-}
-console.log(whatToDoForLunch(hungry, 30));
+    whatToDo = "Maybe going outside isn't such a great idea…";
+  } else {
+    whatToDo = "this is an intense program after all and you should probably reconsider.";
+  }
+  return whatToDo;
+};
+console.log(whatToDoForLunch(30));
