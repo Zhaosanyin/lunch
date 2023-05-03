@@ -1,20 +1,18 @@
 
 let joinList = function(arr) {
-  let strArr = "";
-  for (let i = 0; i < arr.length-1; i ++) {
-    if (i < arr.length) {
-    strArr = strArr + arr [i] + ",";
+  let strArr = " ";
+  for (let i = 0; i < arr.length; i ++) {
+    strArr = strArr + arr[i];
+    if (i < arr.length - 1) {
+      strArr = strArr + ", ";
     } else {
-      strArr = strArr + arr[i] + '.'};  
-    //if (i =arr.length -1) {
-    //  i = i+1;
-    //  strArr =strArr +arr[i] + ".";
-    //}
+      strArr = strArr + '.';
+    }
   }
-    return strArr;
+  return strArr;
 };
 
 const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
-console.log(joinList(conceptList));
+console.log("Today I learned about" + joinList(conceptList));
 //console.log(conceptList);
 //joinList(conceptList);
